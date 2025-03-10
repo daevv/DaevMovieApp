@@ -99,7 +99,7 @@ class MainActivity : ComponentActivity() {
                                 )
                             }
                             composable(BottomMenuItem.Favs.route) {
-                                FavouritesScreen(db = db, uid = navData.uid, navController = navController)
+                                FavouritesScreen(db = db, uid = navData.uid, navController = innerNavController)
                             }
                             composable(BottomMenuItem.Settings.route) {
                                 SettingsScreen(email = navData.email, db = db, uid = navData.uid, navController = navController)
