@@ -1,7 +1,7 @@
 package com.example.filmsapp.ui.login
 
-import CustomButton
-import TextInput
+import com.example.filmsapp.ui.shared.CustomButton
+import com.example.filmsapp.ui.shared.TextInput
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

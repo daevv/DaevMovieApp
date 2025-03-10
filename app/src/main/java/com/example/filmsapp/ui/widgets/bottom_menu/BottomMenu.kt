@@ -1,4 +1,4 @@
-package com.example.filmsapp.ui.main_screen.bottom_menu
+package com.example.filmsapp.ui.widgets.bottom_menu
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar

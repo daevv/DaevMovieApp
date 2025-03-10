@@ -1,6 +1,6 @@
 package com.example.filmsapp.ui.settings_screen
 
-import CustomButton
+import com.example.filmsapp.ui.shared.CustomButton
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

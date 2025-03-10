@@ -1,3 +1,5 @@
+package com.example.filmsapp.ui.shared
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding

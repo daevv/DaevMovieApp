@@ -1,8 +1,8 @@
 package com.example.filmsapp.ui.add_film_screen
 
 
-import TextInput
-import CustomButton
+import com.example.filmsapp.ui.shared.TextInput
+import com.example.filmsapp.ui.shared.CustomButton
 import android.content.ContentResolver
 import android.graphics.BitmapFactory
 import android.net.Uri

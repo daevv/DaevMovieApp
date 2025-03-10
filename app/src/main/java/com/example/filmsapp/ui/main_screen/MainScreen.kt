@@ -20,13 +20,13 @@ import androidx.navigation.NavController
 import com.example.filmsapp.data.Favourite
 import com.example.filmsapp.data.Film
 import com.example.filmsapp.ui.login.data.MainScreenDataObject
-import com.example.filmsapp.ui.main_screen.drawer.DrawerBody
-import com.example.filmsapp.ui.main_screen.drawer.DrawerHeader
+import com.example.filmsapp.ui.widgets.drawer.DrawerBody
+import com.example.filmsapp.ui.widgets.drawer.DrawerHeader
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen(
+fun MainScreen(
     navData: MainScreenDataObject,
     db: FirebaseFirestore,
     navController: NavController,

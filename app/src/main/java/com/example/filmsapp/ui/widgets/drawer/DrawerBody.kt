@@ -1,6 +1,6 @@
-package com.example.filmsapp.ui.main_screen.drawer
+package com.example.filmsapp.ui.widgets.drawer
 
-import CustomButton
+import com.example.filmsapp.ui.shared.CustomButton
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

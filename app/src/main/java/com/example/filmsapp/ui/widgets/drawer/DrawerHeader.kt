@@ -1,4 +1,4 @@
-package com.example.filmsapp.ui.main_screen.drawer
+package com.example.filmsapp.ui.widgets.drawer
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

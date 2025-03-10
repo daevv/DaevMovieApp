@@ -25,8 +25,8 @@ import com.example.filmsapp.ui.film_details_screen.data.FilmDetailsObject
 import com.example.filmsapp.ui.login.LoginScreen
 import com.example.filmsapp.ui.login.data.LoginScreenObject
 import com.example.filmsapp.ui.login.data.MainScreenDataObject
-import com.example.filmsapp.ui.main_screen.HomeScreen
-import com.example.filmsapp.ui.main_screen.bottom_menu.BottomMenuItem
+import com.example.filmsapp.ui.main_screen.MainScreen
+import com.example.filmsapp.ui.widgets.bottom_menu.BottomMenuItem
 import com.example.filmsapp.ui.settings_screen.SettingsScreen
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.firestore.ktx.firestore
@@ -86,7 +86,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier.padding(paddingValues)
                         ) {
                             composable(BottomMenuItem.Home.route) {
-                                HomeScreen(
+                                MainScreen(
                                     navData = navData,
                                     db = db,
                                     onFilmEditClick = { film ->
