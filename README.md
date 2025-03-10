@@ -10,7 +10,6 @@
 - **UI**: Jetpack Compose
 - **База данных**: Firebase Firestore
 - **Авторизация**: Firebase Authentication
-- **Сетевые запросы**: Retrofit
 - **Среда разработки**: Android Studio
 - **Управление зависимостями**: Gradle
 - **Дизайн**: Figma
