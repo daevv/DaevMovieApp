@@ -2,9 +2,8 @@ package com.example.filmsapp.ui.add_film_screen
 
 
 import TextInput
-import LoginButton
+import CustomButton
 import android.content.ContentResolver
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.util.Base64
@@ -14,7 +13,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -34,7 +32,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.rememberAsyncImagePainter
@@ -96,6 +93,8 @@ fun AddFilmScreen(navData: AddFilmObject = AddFilmObject(), onSaved: () -> Unit 
         model = selectedImageUri.value ?: bitmap ?: R.drawable.create_film_bg
     )
 
+    val isEditMode = navData.key.isNotEmpty()
+
     // UI
     Image(
         painter = painter,
@@ -119,7 +118,7 @@ fun AddFilmScreen(navData: AddFilmObject = AddFilmObject(), onSaved: () -> Unit 
         )
         Spacer(Modifier.height(15.dp))
         Text(
-            text = "Add new film",
+            text = if (isEditMode) "Update film" else "Add new film",
             color = Color.Black,
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp,
@@ -134,8 +133,8 @@ fun AddFilmScreen(navData: AddFilmObject = AddFilmObject(), onSaved: () -> Unit 
         Spacer(Modifier.height(10.dp))
         TextInput(text = year.value, label = "Year", singleLine = false) { year.value = it }
         Spacer(Modifier.height(10.dp))
-        LoginButton("Select image") { imageLauncher.launch("image/*") }
-        LoginButton("Save") {
+        CustomButton("Select image") { imageLauncher.launch("image/*") }
+        CustomButton(text = if (isEditMode) "Update" else "Save") {
             val finalImageUrl = selectedImageUri.value?.let { imageToBase64(it, cv) } ?: imageUrl.value
             saveFilmToFirestore(
                 firestore,

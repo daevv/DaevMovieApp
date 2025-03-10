@@ -1,6 +1,6 @@
 package com.example.filmsapp.ui.settings_screen
 
-import LoginButton
+import CustomButton
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,7 +27,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.draw.clip
 import androidx.navigation.NavController
 import com.example.filmsapp.ui.login.data.LoginScreenObject
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
@@ -103,7 +102,7 @@ fun SettingsScreen(
 
         if (!isAdminState.value) {
             Spacer(modifier = Modifier.height(32.dp))
-            LoginButton(text = "Delete Account") { showDialog.value = true }
+            CustomButton(text = "Delete Account") { showDialog.value = true }
 
         }
     }

@@ -1,4 +1,4 @@
-package com.example.filmsapp.ui.main_screen
+package com.example.filmsapp.ui.main_screen.drawer
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -41,11 +41,6 @@ fun DrawerHeader(email: String) {
             color = Color.Black,
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold
-        )
-        Text(
-            email,
-            color = Color.Black,
-            fontSize = 16.sp
         )
     }
 }

@@ -1,6 +1,6 @@
 package com.example.filmsapp.ui.login
 
-import LoginButton
+import CustomButton
 import TextInput
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -96,7 +96,7 @@ fun LoginScreen(
                 fontWeight = FontWeight.Bold
             )
         }
-        LoginButton(text = "Sign In") {
+        CustomButton(text = "Sign In") {
             signIn(
                 auth,
                 emailState.value,
@@ -104,7 +104,7 @@ fun LoginScreen(
                 onSignInSuccess = { navData -> onNavigationToMainScreen(navData) },
                 onSignInFailure = { error -> errorState.value = error })
         }
-        LoginButton(text = "Sign Up") {
+        CustomButton(text = "Sign Up") {
             signUp(
                 auth,
                 emailState.value,

@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.sp
 import com.example.filmsapp.ui.theme.ButtonColor
 
 @Composable
-fun LoginButton(
+fun CustomButton(
     text: String,
     buttonColor: Color = ButtonColor,
     onClick: () -> Unit
